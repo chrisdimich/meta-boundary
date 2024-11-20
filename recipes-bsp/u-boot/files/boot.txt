@@ -1,0 +1,3 @@
+test -n ${fdtfile} || fdtfile setenv k3-am625-carbon.dtb;
+run init_mmc get_kern_mmc get_fdt_mmc get_overlay_mmc;
+booti $loadaddr - $fdtaddr;

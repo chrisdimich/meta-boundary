@@ -1,0 +1,2 @@
+use-kernel-config=defconfig
+config-fragment=kernel/configs/ezurio_ti_arm64_prune.config
