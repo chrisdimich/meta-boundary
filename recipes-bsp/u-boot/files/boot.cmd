@@ -1,19 +1,19 @@
 setenv bootargs ''
 
 if itest.s x${display_dtbo} == x ; then
-	setenv display_dtbo display-hdmi.dtbo;
+	setenv display_dtbo "display-hdmi.dtbo"
 fi
 
 if itest.s "x" == "x${distro_bootpart}" ; then
 	part number ${devtype} ${devnum} rootfs distro_bootpart
 fi
 
-setenv bootargs ${bootargs} console=ttyS0,115200;
+setenv bootargs "${bootargs} console=ttyS0,115200"
 
 if itest.s "x" != "x${loglevel}" ; then
-	setenv bootargs ${bootargs} loglevel=${loglevel}
+	setenv bootargs "${bootargs} loglevel=${loglevel}"
 else
-	setenv bootargs ${bootargs} quiet
+	setenv bootargs "${bootargs} quiet"
 fi
 
 if itest.s "x" != "x${cmd_custom}" ; then
