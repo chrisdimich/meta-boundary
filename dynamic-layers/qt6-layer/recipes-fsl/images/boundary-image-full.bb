@@ -30,12 +30,13 @@ IMAGE_INSTALL_PARSEC = " \
     softhsm \
     os-release \
     ${@bb.utils.contains('MACHINE_FEATURES', 'optee', 'optee-client optee-os', '', d)}"
-   
+
 IMAGE_INSTALL_WIFI_BT ?= "${IMAGE_INSTALL_WIFI_BT_PKGS}"
 IMAGE_INSTALL_WIFI_BT_PKGS = " \
     bdsdmac-firmware \
     if573-sdio-firmware \
     lwb5plus-sdio-sa-firmware \
+    nx61x-firmware \
     kernel-module-bdsdmac-backports \
 "
 
