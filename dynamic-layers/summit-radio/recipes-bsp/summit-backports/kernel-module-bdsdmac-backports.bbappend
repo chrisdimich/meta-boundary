@@ -12,3 +12,7 @@ do_export_sources() {
     # file structure, everything holds together
     install ${STAGING_KERNEL_DIR}/include/linux/stdarg.h  ${S}/drivers/net/wireless/summit/qcacld/CORE/VOSS/inc
 }
+
+# add nx611 module parameters
+module_conf_moal = "options moal mod_para=nxp/wifi_prod_params.conf"
+KERNEL_MODULE_PROBECONF += "moal"
