@@ -14,5 +14,5 @@ do_export_sources() {
 }
 
 # add nx611 module parameters
-module_conf_moal = "options moal mod_para=nxp/wifi_prod_params.conf"
+module_conf_moal = "options moal mod_para=nxp/wifi_prod_serdev_params.conf"
 KERNEL_MODULE_PROBECONF += "moal"
