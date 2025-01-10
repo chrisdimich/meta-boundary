@@ -8,16 +8,16 @@ SUMMARY = "Linux kernel for Boundary Devices boards"
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 
-LINUX_VERSION = "6.6.23"
+LINUX_VERSION = "6.6.36"
 
 SRC_URI = "git://github.com/boundarydevices/linux.git;branch=${SRCBRANCH};protocol=https \
 "
 
 LOCALVERSION = "+yocto"
-SRCBRANCH = "ezurio-lf-6.6.y"
-SRCREV = "51abcf90df4594ced16b25ff0834486b33bd14f0"
+SRCBRANCH = "ezurio-lf-6.6.y-next"
+SRCREV = "da79c0e6c9d14dfeb2311dac4ca963fb15ac4f50"
 DEPENDS += "lzop-native bc-native"
-COMPATIBLE_MACHINE = "(nitrogen6x|nitrogen6x-lite|nitrogen6sx|nitrogen7|nitrogen8m|nitrogen8mm|nitrogen8mn|nitrogen8mp|nitrogen8ulp|nitrogen93)"
+COMPATIBLE_MACHINE = "(nitrogen6x|nitrogen6x-lite|nitrogen6sx|nitrogen7|nitrogen8m|nitrogen8mm|nitrogen8mn|nitrogen8mp|nitrogen8ulp|nitrogen93|nitrogen95)"
 
 KBUILD_DEFCONFIG ?= "ezurio_defconfig"
 
